@@ -1,10 +1,14 @@
-const { NxAppRspackPlugin } = require('@nx/rspack/app-plugin');
-const { NxReactRspackPlugin } = require('@nx/rspack/react-plugin');
-const { join } = require('path');
+import { NxAppRspackPlugin } from '@nx/rspack/app-plugin';
+import { NxReactRspackPlugin } from '@nx/rspack/react-plugin';
+import { join } from 'path';
+import { NxModuleFederationPlugin } from '@nx/module-federation/rspack';
+import mfconfig from './module-federation.config';
 
 module.exports = {
   output: {
-    path: join(__dirname, 'dist'),
+    path: join(__dirname, '../../dist/apps/products'),
+    publicPath: 'auto',
+    uniqueName: 'products',
   },
   devServer: {
     port: 4201,
@@ -14,6 +18,12 @@ module.exports = {
       htmlAcceptHeaders: ['text/html', 'application/xhtml+xml'],
     },
   },
+  ignoreWarnings: [
+    {
+      module: /@module-federation\/error-codes/,
+      message: /Failed to parse source map/,
+    },
+  ],
   plugins: [
     new NxAppRspackPlugin({
       tsConfig: './tsconfig.app.json',
@@ -30,5 +40,11 @@ module.exports = {
       // See: https://react-svgr.com/
       // svgr: false
     }),
+    new NxModuleFederationPlugin(
+      {
+        config: mfconfig,
+      },
+      { dts: false }
+    ),
   ],
 };

@@ -16,6 +16,7 @@
     "@nx/eslint-plugin": "22.0.1",
     "@nx/jest": "22.0.1",
     "@nx/js": "22.0.1",
+    "@nx/module-federation": "^22.0.1",
     "@nx/playwright": "22.0.1",
     "@nx/react": "22.0.1",
     "@nx/rspack": "22.0.1",
@@ -62,7 +63,7 @@
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.3.0",
-    "typescript": "~5.9.2",
+    "typescript": "~5.9.3",
     "typescript-eslint": "^8.40.0",
     "vite": "^7.0.0",
     "vitest": "^3.0.0"
