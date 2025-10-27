@@ -24,7 +24,7 @@ export default defineConfig({
   },
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npx nx run @nx-microfrontend-react19/products:preview',
+    command: 'npx nx run products:preview',
     url: 'http://localhost:4201',
     reuseExistingServer: true,
     cwd: workspaceRoot,

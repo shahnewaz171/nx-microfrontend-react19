@@ -1,10 +1,10 @@
 {
-  "name": "@nx-microfrontend-react19/products-e2e",
+  "name": "products-e2e",
   "version": "0.0.1",
   "private": true,
   "nx": {
     "implicitDependencies": [
-      "@nx-microfrontend-react19/products"
+      "products"
     ]
   }
 }

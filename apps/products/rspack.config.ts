@@ -1,7 +1,10 @@
 import { NxAppRspackPlugin } from '@nx/rspack/app-plugin';
 import { NxReactRspackPlugin } from '@nx/rspack/react-plugin';
 import { join } from 'path';
-import { NxModuleFederationPlugin } from '@nx/module-federation/rspack';
+import {
+  NxModuleFederationDevServerPlugin,
+  NxModuleFederationPlugin,
+} from '@nx/module-federation/rspack';
 import mfconfig from './module-federation.config';
 
 module.exports = {
@@ -12,6 +15,12 @@ module.exports = {
   },
   devServer: {
     port: 4201,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers':
+        'X-Requested-With, content-type, Authorization',
+    },
     historyApiFallback: {
       index: '/index.html',
       disableDotRule: true,
@@ -46,5 +55,8 @@ module.exports = {
       },
       { dts: false }
     ),
+    new NxModuleFederationDevServerPlugin({
+      config: mfconfig,
+    }),
   ],
 };

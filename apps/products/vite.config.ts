@@ -10,7 +10,7 @@ export default defineConfig(() => ({
   //  plugins: [ nxViteTsPaths() ],
   // },
   test: {
-    name: '@nx-microfrontend-react19/products',
+    name: 'products',
     watch: false,
     globals: true,
     environment: 'jsdom',
