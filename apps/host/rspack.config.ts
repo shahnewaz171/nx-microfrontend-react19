@@ -9,9 +9,9 @@ import mfconfig from './module-federation.config';
 
 module.exports = {
   output: {
-    path: join(__dirname, '../../dist/apps/nx-microfrontend-react19'),
+    path: join(__dirname, '../../dist/apps/host'),
     publicPath: 'auto',
-    uniqueName: 'nx-microfrontend-react19',
+    uniqueName: 'host',
   },
   devServer: {
     port: 4200,

@@ -4,13 +4,7 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/nx-microfrontend-react19-e2e"
-    },
-    {
-      "path": "./apps/nx-microfrontend-react19"
-    },
-    {
-      "path": "./apps/products-e2e"
+      "path": "./apps/host"
     },
     {
       "path": "./apps/products"

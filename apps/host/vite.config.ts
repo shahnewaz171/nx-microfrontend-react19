@@ -3,14 +3,14 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(() => ({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/apps/nx-microfrontend-react19',
+  cacheDir: '../../node_modules/.vite/apps/host',
   plugins: [react()],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [ nxViteTsPaths() ],
   // },
   test: {
-    name: 'nx-microfrontend-react19',
+    name: 'host',
     watch: false,
     globals: true,
     environment: 'jsdom',

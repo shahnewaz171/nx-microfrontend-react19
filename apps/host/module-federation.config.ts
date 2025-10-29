@@ -1,7 +1,7 @@
 import { ModuleFederationConfig } from '@nx/module-federation';
 
 const config: ModuleFederationConfig = {
-  name: 'nx-microfrontend-react19',
+  name: 'host',
   remotes: [['products', 'http://localhost:4201/remoteEntry.js']],
 };
 
