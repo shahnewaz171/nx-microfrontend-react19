@@ -2,7 +2,6 @@
   "files": [],
   "include": [],
   "compilerOptions": {
-    "rootDir": "src",
     "jsx": "react-jsx"
   },
   "references": [

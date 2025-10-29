@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <StrictMode>
     <>
-      <p>You are running in the remote</p>
+      <p>I'm running in the remote</p>
       <Button />
     </>
   </StrictMode>
