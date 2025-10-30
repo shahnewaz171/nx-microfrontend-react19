@@ -22,9 +22,7 @@
     "strict": true,
     "target": "es2022",
     "paths": {
-      "products/RemoteButton": [
-        "apps/products/src/components/remote-button.tsx"
-      ]
+      "products/RemoteButton": ["apps/host/@mf-types/products/RemoteButton"]
     }
   }
 }

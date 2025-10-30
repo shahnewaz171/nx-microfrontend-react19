@@ -19,7 +19,10 @@ export default [
         'error',
         {
           enforceBuildableLibDependency: true,
-          allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$'],
+          allow: [
+            '^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$',
+            '^[a-zA-Z0-9-_]+/.*$', // Allow all Module Federation remote imports (e.g., products/*, cart/*, etc.)
+          ],
           depConstraints: [
             {
               sourceTag: '*',

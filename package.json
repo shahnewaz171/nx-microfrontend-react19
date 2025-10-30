@@ -67,5 +67,10 @@
   },
   "workspaces": [
     "apps/*"
-  ]
+  ],
+  "pnpm": {
+    "overrides": {
+      "@module-federation/dts-plugin": "^0.21.1"
+    }
+  }
 }

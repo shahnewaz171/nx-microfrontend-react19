@@ -53,7 +53,9 @@ module.exports = {
       {
         config: mfconfig,
       },
-      { dts: false }
+      {
+        dts: true,
+      }
     ),
     new NxModuleFederationDevServerPlugin({
       config: mfconfig,
