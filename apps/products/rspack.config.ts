@@ -51,7 +51,9 @@ module.exports = {
         config: mfconfig,
       },
       {
-        dts: true,
+        dts: {
+          tsConfigPath: './tsconfig.app.json',
+        },
       }
     ),
   ],
