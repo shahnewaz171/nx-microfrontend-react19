@@ -1,10 +1,7 @@
 import { NxAppRspackPlugin } from '@nx/rspack/app-plugin';
 import { NxReactRspackPlugin } from '@nx/rspack/react-plugin';
 import { join } from 'path';
-import {
-  NxModuleFederationDevServerPlugin,
-  NxModuleFederationPlugin,
-} from '@nx/module-federation/rspack';
+import { NxModuleFederationPlugin } from '@nx/module-federation/rspack';
 import mfconfig from './module-federation.config';
 
 module.exports = {
@@ -57,8 +54,5 @@ module.exports = {
         dts: true,
       }
     ),
-    new NxModuleFederationDevServerPlugin({
-      config: mfconfig,
-    }),
   ],
 };
